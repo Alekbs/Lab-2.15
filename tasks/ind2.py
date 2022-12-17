@@ -25,10 +25,8 @@ if __name__ == "__main__":
         with open(sys.argv[1], "r", encoding="utf-8") as f:
             sentences = f.readlines()
 
-            for i, sentence in enumerate(sentences):
-                print(sentence)
-                if i >= 9:
-                    break
+        for i in sentences[-10:]:
+            print(i)
 
     except IOError:
         # Отображаем ошибку, если с чтением из файла возникли проблемы
